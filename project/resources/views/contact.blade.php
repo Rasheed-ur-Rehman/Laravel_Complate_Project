@@ -1,0 +1,1 @@
+<h1>this is contact view and id is {{$id}}</h1>
