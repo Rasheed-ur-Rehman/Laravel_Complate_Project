@@ -7,6 +7,7 @@ use App\Http\Controllers\test;
 use App\Http\Controllers\usercontroller;
 use App\Http\Controllers\crudc;
 use App\Http\Controllers\userouth;
+use App\Http\Controllers\addmembers;
 
 
 
@@ -73,11 +74,14 @@ Route::get('/logout', function(){
 });
 
 
-// Route::group(['middleware'=>['protectpage']],function(){
+Route::get('langauge.{lang}', function($lang){
+    App::setlocale($lang);
+    return view('langauge');
 
-// 	Route::view('user','user');
-// });
+});
 
+Route::view('insert','addmember');
+Route::post('insert',[addmembers::class,'AddMimber']);
 
 
 
