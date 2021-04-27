@@ -84,6 +84,19 @@ Route::view('insert','addmember');
 Route::post('insert',[addmembers::class,'AddMimber']);
 
 
+Route::view('crud','user');
+Route::post('users',[crudc::class,'insert']);
+
+Route::get('show',[crudc::class,'show']);
+
+
+Route::get('delete/{id}',[crudc::class,'delete']);
+
+Route::get('update/{id}',[crudc::class,'ShowData']);
+
+Route::post('update',[crudc::class,'update1']);
+
+
 
 
 
