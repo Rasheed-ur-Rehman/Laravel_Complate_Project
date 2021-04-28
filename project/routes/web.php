@@ -8,6 +8,7 @@ use App\Http\Controllers\usercontroller;
 use App\Http\Controllers\crudc;
 use App\Http\Controllers\userouth;
 use App\Http\Controllers\addmembers;
+use App\Http\Controllers\crud;
 
 
 
@@ -95,6 +96,11 @@ Route::get('delete/{id}',[crudc::class,'delete']);
 Route::get('update/{id}',[crudc::class,'ShowData']);
 
 Route::post('update',[crudc::class,'update1']);
+
+Route::get('display',[crud::class,'display']);
+Route::get('insertdata',[crud::class,'insert']);
+Route::get('updatedata',[crud::class,'update']);
+Route::get('deletedata',[crud::class,'delete']);
 
 
 
