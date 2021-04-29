@@ -103,6 +103,8 @@ Route::get('updatedata',[crud::class,'update']);
 Route::get('deletedata',[crud::class,'delete']);
 
 
+Route::get('viewalldata',[contact::class,'viewdata']);
+
 
 
 

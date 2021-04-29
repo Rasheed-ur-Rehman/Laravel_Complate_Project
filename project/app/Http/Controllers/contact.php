@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class contact extends Controller
 {
@@ -20,12 +21,13 @@ function loadview(){
 
 }
 
-function viewdata($name1){
+function viewdata(){
 
-// return view('help',['name'=>$name]);
 
-// $name1=$new $name('Rasheed');
-
+return DB::table('user')
+->join('people','people.id','=','user.id')
+->select('people.*')
+->get();
 
 }  
 
